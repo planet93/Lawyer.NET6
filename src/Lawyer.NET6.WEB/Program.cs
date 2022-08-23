@@ -1,7 +1,18 @@
+using Lawyer.NET6.WEB;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().
+        //Установка этих параметров необходима, чтобы в возвращаемом результате не изменялся регист названия полей
+        AddJsonOptions(options =>
+        {
+            options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
+            options.JsonSerializerOptions.PropertyNamingPolicy = null;
+        });
+
+builder.Services.AddEmailService();
+builder.Services.AddLawyerService();
 
 var app = builder.Build();
 

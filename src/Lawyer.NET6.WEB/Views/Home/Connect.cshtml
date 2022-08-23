@@ -4,17 +4,40 @@
 
 <h1>Связаться с нами</h1>
 
-<button type="button" class="btn btn-primary" @@click="click_alert_1" >This is an alert dialog.</button>
+<div class="row">
+  <div class="col-12">
+    <button type="button" class="btn btn-primary" @@click="click_alert_1" >This is an alert dialog.</button>
 
-<button type="button" class="btn btn-secondary" @@click="click_alert_2">This is a confirm dialog.</button>
+    <button type="button" class="btn btn-secondary" @@click="click_alert_2">This is a confirm dialog.</button>
 
-<button type="button" class="btn btn-success" @@click="click_alert_3">Success message</button>
+    <button type="button" class="btn btn-success" @@click="click_alert_3">Success message</button>
+  </div>
+</div>
+
+
+<div class="row">
+    <div class="col-4">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Адрес электронной почты</label>
+            <input type="email" class="form-control" v-model="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Пример текстового поля</label>
+            <textarea class="form-control" v-model="text" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+            <button type="button" class="btn btn-success" @@click="click_send_email">Отправить письмо</button>
+        </div>
+    </div>
+</div>
 
 @section scripts{
-    <script type="text/javascript">
+  <script type="text/javascript">
         var lawyerApp = new Vue({
         el: vueDefaultId,
         data: {
+          email:"",
+          text:"",
         },
         methods: {
             click_alert_1() {
@@ -35,10 +58,26 @@
             click_alert_3() {
                 alertify.success('Success message 123');
             },
+            click_send_email(){
+              var obj = {
+                        Email: this.email, Text: this.text
+                };
+                    loader.show();
+                    axios.post("/Home/SendEmail", obj).then(resp => {
+                      console.log(resp.data);
+                        if(resp.data.Error){
+                          alertify.error(resp.data.ErrorMessage);
+                        }
+                        else{
+                          alertify.success(resp.data.ErrorMessage);
+                        }
+                        loader.hide();
+                    });            
+            }
         },
         mounted() {
             loader.hide();
         },
     });
-    </script>
+  </script>
 }

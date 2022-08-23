@@ -1,4 +1,6 @@
-﻿using Lawyer.NET6.WEB.Models;
+﻿using Lawyer.NET6.BLL.Service;
+using Lawyer.NET6.BLL.ViewModel;
+using Lawyer.NET6.WEB.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -7,10 +9,11 @@ namespace Lawyer.NET6.WEB.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly LawyerService _lawyerService;
+        public HomeController(ILogger<HomeController> logger, LawyerService lawyerService)
         {
             _logger = logger;
+            _lawyerService = lawyerService;
         }
 
         public IActionResult Index()
@@ -40,5 +43,23 @@ namespace Lawyer.NET6.WEB.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        #region Json
+
+        [HttpPost]
+        public async Task<JsonResult> SendEmail([FromBody] EmailViewModel model)
+        {
+            try
+            {
+                var res = await _lawyerService.Check_and_Send_Feedback(model);
+                return Json(res);
+            }
+            catch(Exception ex)
+            {
+                return Json(new {Error = true, ErrorMessage = ex.Message });
+            }
+        }
+
+        #endregion
     }
 }
