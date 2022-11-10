@@ -17,29 +17,46 @@
         
         <!--Header-->
         <header>
-            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Главная</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-lawyer" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <div class="fixed-nav">
+                <nav class="navbar navbar-expand-sm navbar-toggleable-sm lawyer_navbar" style="padding-bottom:0">
+                    <div class="margin-top-nav"></div>
+                    <div class="container-fluid margin-nav">
+                        <a class="text-1" asp-area="" asp-controller="Home" asp-action="Index">
+                            Юридические технологии
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-lawyer" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
 
-                <div class="navbar-collapse collapse " id="navbar-lawyer">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Home/About">О нас</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Home/Service">Услуги</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Home/Connect">Связаться с нами</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+                        <div class="navbar-collapse collapse " id="navbar-lawyer">
+                            <ul class="navbar-nav flex-grow-1">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Home/About">О нас</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Бесплатная юридическая помощь</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Примирение</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Home/Service">Юридическая помощь</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Home/Connect">Контакты</a>
+                                </li>
+                                <li class="nav-item" style="margin-left:auto">
+                                    <div class="nav-link">
+                                        <span class="icon-phone"></span>
+                                        <a class="nav-phone" href="tel:+79213892866">+7 (921) 389-28-66</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>            
         </header>
         
         <div class="container body-content">
