@@ -1,6 +1,29 @@
 
 
 /* #region Media*/
+@media (max-width: 575px) {
+    .lawyer-hidden-1200 {
+        display: none;
+    }
+    .body-content {
+        margin-top: 1rem;
+    }
+    .text-2-size {
+        font-size: 3.5rem;
+        line-height: 3rem;
+    }
+    .block-img-1 {
+        max-width: 100%;
+        min-width: 300px;
+        height: auto;
+        margin-top:3rem;
+    }
+    .img-1 {
+        max-width: 100%;
+        min-width: 300px;
+        height: auto;
+    }
+}
 @media (min-width: 576px) {
     header {
         max-width: 540px;
@@ -10,6 +33,16 @@
         width: 100%;
         max-width: 540px;
         top: 0;
+    }
+    .lawyer-hidden-1200 {
+        display: none;
+    }
+    .body-content {
+        margin-top: 9rem;
+    }
+    .text-2-size {
+        font-size: 3.5rem;
+        line-height: 3rem;
     }
 }
 @media (min-width: 768px) {
@@ -22,6 +55,16 @@
         max-width: 720px;
         top: 0;
     }
+    .body-content {
+        margin-top: 9rem;
+    }
+    .text-2-size {
+        font-size: 3.5rem;
+        line-height: 3rem;
+    }
+    .lawyer-hidden-1200 {
+        display: none;
+    }    
 }
 @media (min-width: 992px) {
     header {
@@ -33,8 +76,28 @@
         max-width: 960px;
         top: 0;
     }
+    .body-content {
+        margin-top: 9rem;
+    }
+
+    .text-2-size {
+        font-size: 3.5rem;
+        line-height: 3rem;
+    }
+    .lawyer-hidden-1200{
+        display:none;
+    }
+    .block-img-1 {
+        width: 596px;
+        height: 500px;
+    }
+    .img-1 {
+        position: absolute;
+        margin-left: -160px;
+        margin-top: 0px;
+    }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1200px) {    
     header {
         max-width: 1140px;
     }
@@ -44,8 +107,23 @@
         max-width: 1140px;
         top: 0;
     }
+    .body-content {
+        margin-top: 9rem;
+    }
+
+    .text-2-size {
+        font-size: 3.5rem;
+        line-height: 3rem;
+    }
+    .lawyer-hidden-1200 {
+        display: block;
+    }
+    
 }
 @media (min-width: 1400px) {
+    .body-content {
+        margin-top: 156px;
+    }
     header {
         max-width: 1320px;
     }
@@ -55,7 +133,15 @@
         max-width: 1320px;
         top: 0;
     }
+    .text-2-size {
+        font-size: 96px;
+        line-height: 71px;
+    }
+    .lawyer-hidden-1200 {
+        display: block;
+    }
 }
+
 /*#endregion Media*/
 
 .loader {
@@ -85,6 +171,9 @@
 header {
     margin-right: auto;
     margin-left: auto;
+}
+.position-z-999{
+    z-index:999;
 }
 .lawyer_navbar {
     flex-wrap: wrap;
@@ -153,7 +242,104 @@ header {
 }
 /*#endregion Header*/
 /*#region Body*/
-.body-content {
-    margin-top: 156px;
+
+.text-2 {
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 500;    
+    color: #344150;
+}
+.text-3 {
+    font-family: 'Commissioner';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #000000;
+}
+.btn-main-page {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px 28px;
+    gap: 10px;
+    width: 176px;
+    height: 49px;
+    left: 0px;
+    top: 393px;
+    background: #A98B51;
+    border-radius: 32px;
+    text-decoration: none;
+    margin-top:48px;
+}
+.text-btn {
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.btn-main-page-2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px 28px;
+    gap: 10px;
+    width: 191px;
+    height: 47px;
+    left: 0px;
+    top: 336px;
+    border: 1px solid #A98B51;
+    border-radius: 32px;
+    text-decoration: none;
+}
+.text-btn-2 {
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #A98B51;
+}
+.background-grey {
+    background: #F3F3F3;
+}
+.text-4 {
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    color: #344150;
+}
+.text-5 {
+    font-family: 'Commissioner';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #000000;
+}
+.text-6 {
+    font-family: 'Commissioner';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #000000;
+    text-align:justify;
+}
+.background-black-grey {
+    background: #344150;
+}
+.position-z-100 {
+    z-index: 100;
+}
+.cursor-link{
+    cursor:pointer;
 }
 /*#endregion Body*/
