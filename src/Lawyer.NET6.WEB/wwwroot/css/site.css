@@ -147,6 +147,10 @@ header {
     color: #000000;
     text-decoration:none;
 }
+.tel-icon {
+    font-size: 0.85rem;
+    color: #A98B51;
+}
 /*#endregion Header*/
 /*#region Body*/
 .body-content {
