@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lawyer - @ViewData["Title"]</title>
+    <title>Юридические технологии - @ViewData["Title"]</title>
     <link rel="stylesheet" href="~/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="~/css/alertify.min.css" />
@@ -36,10 +36,10 @@
                                     <a class="nav-link" href="/Home/About">О нас</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Бесплатная юридическая помощь</a>
+                                    <a class="nav-link" href="/Home/FreeLegalAssistance">Бесплатная юридическая помощь</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Примирение</a>
+                                    <a class="nav-link" href="/Home/Reconciliation">Примирение</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/Home/Service">Юридическая помощь</a>
@@ -62,13 +62,17 @@
         
         <div class="container body-content">
             @RenderBody()
-            <div class="line-hr">
-                <hr />
-            </div>            
-            <footer class="text-center">
-                <span>
-                    <a href="/" target="_blank">B.A.S.E</a> &copy; @DateTime.Now.Year v.1.0
-                </span>
+            
+            <footer>
+                <div class="row">
+                    <div class="col-md-12 col-lg-6">
+                        <span class="text-footer margin-footer-1">&copy; @DateTime.Now.Year Юридические технологии</span>
+                        
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <span class="text-footer margin-footer-2">Сайт разработан в <a href="https://base4you.ru/" target="_blank">Base4web</a></span>
+                    </div>
+                </div>
             </footer>
         </div>
 

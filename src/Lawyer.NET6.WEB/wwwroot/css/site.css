@@ -23,6 +23,20 @@
         min-width: 300px;
         height: auto;
     }
+    .margin-footer-1 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+    }
+    .margin-footer-2 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+    }
+    .text-7-margin {
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
 }
 @media (min-width: 576px) {
     header {
@@ -43,6 +57,10 @@
     .text-2-size {
         font-size: 3.5rem;
         line-height: 3rem;
+    }
+    .text-7-margin {
+        margin-top: 1rem;
+        margin-left: 1rem;
     }
 }
 @media (min-width: 768px) {
@@ -96,6 +114,33 @@
         margin-left: -160px;
         margin-top: 0px;
     }
+    .margin-footer-1 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+        margin-left: 2rem;
+        float: left;
+    }
+    .margin-footer-2 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-right: 2rem;
+        float: right;
+    }
+    .text-7-margin {
+        margin-top: 121px;
+        margin-left: 1rem;
+    }
+    .ellipse-2 {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #ECDFC6;
+        position: absolute;
+        margin-top: 30px;
+        margin-left: 1rem;
+    }
+
 }
 @media (min-width: 1200px) {    
     header {
@@ -118,7 +163,6 @@
     .lawyer-hidden-1200 {
         display: block;
     }
-    
 }
 @media (min-width: 1400px) {
     .body-content {
@@ -270,7 +314,24 @@ header {
     background: #A98B51;
     border-radius: 32px;
     text-decoration: none;
-    margin-top:48px;
+    margin-top: 48px;
+    transition: 0.5s;
+}
+.btn-main-page:hover {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px 28px;
+    gap: 10px;
+    width: 176px;
+    height: 49px;
+    left: 0px;
+    top: 393px;
+    background: #664402;
+    border-radius: 32px;
+    text-decoration: none;
+    margin-top: 48px;
+    transition: 0.5s;
 }
 .text-btn {
     font-family: 'Cormorant Garamond';
@@ -295,6 +356,24 @@ header {
     border: 1px solid #A98B51;
     border-radius: 32px;
     text-decoration: none;
+    transition: 0.5s;
+}
+.btn-main-page-2:hover {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px 28px;
+    gap: 10px;
+    width: 191px;
+    height: 47px;
+    left: 0px;
+    top: 336px;
+    border: 1px solid #A98B51;
+    border-radius: 32px;
+    text-decoration: none;
+    background-color:#e7e7e7;
+    transition: 0.5s;
 }
 .text-btn-2 {
     font-family: 'Cormorant Garamond';
@@ -342,4 +421,95 @@ header {
 .cursor-link{
     cursor:pointer;
 }
+.text-7 {
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 46px;
+    color: #ECDFC6;
+}
+
+.text-8 {
+    font-family: 'Commissioner';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+.text-8-margin {
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+.text-9 {
+    font-family: 'Commissioner';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 34px;
+    color: #FFFFFF;
+    text-decoration:none;
+}
+.text-9-margin {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+.text-10 {
+    font-family: 'Commissioner';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 34px;
+    text-decoration-line: underline;
+    color: #8696A9;
+}
+.text-10-margin {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+.text-p-1 {
+    font-family: 'Commissioner';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #000000;
+    text-align: justify;
+    text-indent: 1.5em;
+}
+.h1-page {
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    color: #344150;
+}
 /*#endregion Body*/
+/*#region Figures*/
+
+/*#endregion Figures*/
+.ellipse-1 {
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    background: #8696A9;
+    position: absolute;
+    margin-top: -100px;
+    margin-left: 290px;
+}
+.block-ellipse-rb {
+    background: radial-gradient(circle at 92% 84%, rgba(69, 82, 98, 1) 135px, #344150 0px);
+}
+
+/*#region Footer*/
+.text-footer {
+    font-family: 'Commissioner';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: #757575;
+}
+
+
+/*#endregion Footer*/

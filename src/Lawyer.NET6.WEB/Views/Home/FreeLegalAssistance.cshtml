@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Бесплатная юридическая помощь";
+}
+
+<h1 class="h1-page">@ViewData["Title"]</h1>
+
+<div class="row justify-content-center">
+    <div class="col-md-12 col-lg-12 text-p-1">
+        Настоящий раздел посвящен бесплатной юридической помощи. Раздел является
+        библиотекой полезных знаний. В разделе вы найдете множество шаблонов документов.
+        В разделе есть окно обратной связи. Вы можете написать нам о своей проблеме.
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+        var lawyerApp = new Vue({
+            el: vueDefaultId,
+            data: {
+            },
+            methods: {
+            },
+            mounted() {
+                loader.hide();
+                //loader_hide();
+            },
+        });
+    </script>
+}

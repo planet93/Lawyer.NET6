@@ -32,6 +32,14 @@ namespace Lawyer.NET6.WEB.Controllers
         {
             return View();
         }
+        public IActionResult FreeLegalAssistance()
+        {
+             return View();
+        }
+        public IActionResult Reconciliation()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {
